@@ -12,3 +12,16 @@
 .accomplishments {
 	font-size: .8em;
 }
+
+/*pseudoselector*/
+
+p::first-letter {
+	color: 	#A52A2A;
+	text-decoration: underline;
+}
+
+/*child element*/
+
+section > section {
+	background-color: green;
+}
