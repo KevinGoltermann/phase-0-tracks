@@ -1,0 +1,19 @@
+For each new passenger on the elevator:
+	-Until you hear a response or have announced every floor:
+		-Count down the floors from ten to one
+		-Wait one second for a response
+		-Go to floor that corresponds with response after floor announced
+	-If no response was heard:
+		-Trigger loud warning noise to alert passenger
+		-Repeat previous step
+	-After three ‘no response’ steps, open elevator doors until elevator is 		called again
+
+
+Dog Ball Thrower
+
+When motion is detected:
+	-Turn on power
+	-Start ball conveyor belt to launch device
+	-Activate launch device every 10 seconds
+If no motion is detected in 3 minutes:
+	-Turn power off
