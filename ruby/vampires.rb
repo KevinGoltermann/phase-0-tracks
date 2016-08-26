@@ -22,6 +22,8 @@ total_employees.times do
 
 	actual_age = 2016 - year
 
+	
+
 
 	if age == actual_age && bread == 'yes' || insurance == 'yes'
 	  puts "probably not a vampire"
