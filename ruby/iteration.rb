@@ -31,6 +31,13 @@
 
 # puts "After .map call:"
 # p letters
+def hello_world
+	puts "Hello, World!"
+	yield "John"
+end
+hello_world { |name1| puts "How are you #{name1}?" }
+
+
 
 array = ["blue", "yellow", "red", "orange", "purple", "black"]
 
