@@ -45,12 +45,12 @@ until valid_input
 
 puts "Please enter names you would like to change. When finished, enter 'done'"
 	original_name = gets.chomp.downcase
-	puts name_switch(vowel_adv(constant_adv(original_name)))
+  output = name_switch(vowel_adv(constant_adv(original_name)))
+	puts puts "Your secret name is #{output}"
 	name = TRUE
 	valid_input = FALSE
-	output = name_switch(vowel_adv(constant_adv(original_name)))
+	
 	user_data = {original_name: original_name, output: output}
-	puts user_data
 	puts "#{output} is also known as #{original_name}"
 	
 	if original_name == "done"
@@ -62,8 +62,7 @@ end
 #--------storing aliases-----#
 output = name_switch(vowel_adv(constant_adv(original_name)))
 user_data = {original_name: original_name, output: output}
-puts user_data
-puts "#{output} is also known as #{original_name}"
+
 
 
 
