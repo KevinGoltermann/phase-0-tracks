@@ -62,9 +62,26 @@ p variable
 remove(variable, 'lemonade')
 p variable
 update(variable, 'ice-cream', 1)
-p variable
+p updated_variable
 nice_print(variable)
 variable
+
+=begin
+In this assignemnt I learned that pseudocoding is really nice to rely on when you get stuck. There were multiple times where we got stuck and started to lose our train of thoughts, but were able to look back at the pseudocode and realize what we needed to be accomplishing.
+
+Arrays are nice because they allow to just make an organized list, but hashes were every effective because they allowed us to tie a quantity to a food and then print both of those in a sentence very easily. 
+
+A method returns what is described in its body. In this assignment, we were able to tie multiple methods toether to produce a final product.
+
+You can pass multiple things like blocks, arrays, hashes, variables, and string methods to name a few.
+
+You can pass info between methods by assigning variables and information that has been gathered in ararys and hashes.
+
+One concept that was solidified was actually using pseudocoding. I tend to pass it up alot of the time, but this instance made me realize its really important. One concept I still have to work on is using arrays and hashes withing methods. I'm comfortable using them by themselves, but I sometimes still get lost when I have to use them together or in methods. 
+
+
+
+=end
 
 
 
