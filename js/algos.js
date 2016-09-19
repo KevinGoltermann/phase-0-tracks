@@ -4,7 +4,7 @@
 // -return the longest phrase/word
 
 //Creating array so we can search it later
-/*var array = ["long phrase","longest phrase","longer phrase"];
+var array = ["long phrase","longest phrase","longer phrase"];
 var array_2 = ["ok", "hello", "no wayyyy", "here"]
 var array_3 = ["one", "three", "twenty five", "two"]
 
@@ -61,10 +61,37 @@ function match(object_1, object_2) {
 
 console.log(match({name: "Kevin", age: 23}, {name: "Kevin", age: 2}));
 console.log(match({name: "Joe", age: 1}, {name: "Steve", age: 100}))
-*/
 
-//Release 3
 
+//Release 2
+
+// Creates method with the number as arguement
+function Create(number) {
+
+// Setting variables and empty array
+  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+  var word_array = [];
+  var word = "";
+  this.number = number;
+
+// Creating random strings with alphabet variable and adding to array
+  for (var i = 0; i < number; i++) {
+    for (var idx = 0; idx < (Math.floor(Math.random() * 10) + 1); idx++) {
+      word += alphabet.charAt(Math.floor(Math.random() * 26) + 1);
+      if (word_array.length == number) {
+        break;
+      }
+    }
+    word_array.push(word)
+  }
+  return word_array
+}
+
+// Looping and printing through function
+var loop = 10;
+for (var i = 0; i < loop; i++) {
+  console.log(find(Create(3)));
+}
 
 
 
