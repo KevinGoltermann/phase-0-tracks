@@ -1,0 +1,54 @@
+SELECT * FROM snowboarders;
+
+1|Travis Rice|33|false|2
+2|Shaun White|30|true|3
+3|Danny Davis|28|true|1
+
+
+
+
+UPDATE snowboarders SET age=33.5 WHERE name="Travis Rice";
+SELECT * FROM snowboarders;
+
+1|Travis Rice|33.5|false|2
+2|Shaun White|30|true|3
+3|Danny Davis|28|true|1
+
+
+
+SELECT * FROM snowboarders, sponsors WHERE snowboarders.sponsor_id = sponsors.id;
+
+1|Travis Rice|33.5|false|2|2|Red Bull|1984
+2|Shaun White|30|true|3|3|Volcom|1991
+3|Danny Davis|28|true|1|1|Burton|1977
+
+
+
+SELECT snowboarders.name, sponsors.company FROM snowboarders JOIN sponsors ON snowboarders.sponsor_id = sponsors.id;
+
+Travis Rice|Red Bull
+Shaun White|Volcom
+Danny Davis|Burton
+
+DELETE FROM snowboarders WHERE name="Danny Davis";
+SELECT * FROM snowboarders;
+
+1|Travis Rice|33.5|false|2
+2|Shaun White|30|true|3
+
+
+
+SELECT name, age FROM snowboarders CROSS JOIN sponsors;
+
+
+Travis Rice|33.5
+Travis Rice|33.5
+Travis Rice|33.5
+Shaun White|30
+Shaun White|30
+Shaun White|30
+
+SELECT name, age, regular FROM snowboarders NATURAL JOIN sponsors;
+
+Travis Rice|33.5|false
+Shaun White|30|true
