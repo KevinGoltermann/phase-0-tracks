@@ -37,6 +37,7 @@ end
 puts "Welcome to Flight Tracker! What would you like to do?"
 exit = FALSE
 until exit == TRUE
+	puts "-"*60
 	puts "Add a flight ==> 1"
 	puts "Delete a flight ==> 2"
 	puts "View all of your scheduled flights ==> 3"
@@ -45,6 +46,7 @@ until exit == TRUE
 	if input == 'done'
 		puts "Thanks. Come back with your next flights!"
 		exit = TRUE
+	
 	elsif input == "1"
 		puts "Flight number:"
 		flight_number_addition = gets.to_i
@@ -56,13 +58,16 @@ until exit == TRUE
 		flight_arrival_addition = gets.chomp
 		add_flight(db, flight_number_addition, flight_day_addition, flight_departure_addition, flight_arrival_addition)
 		puts "Your flight has been added!"
-	elsif input = "2"
+	
+	elsif input == "2"
 		puts "Please enter the flight number you would like to delete:"
 		flight_delete_number = gets.to_i
 		delete_flight(db, flight_delete_number)
 		puts "Your flight has been deleted!"
-	elsif input = "3"
+	
+	elsif input == "3"
 		flight_list(db)
+	
 	else
 		puts 'Please enter the the number that corresponds to your choice.'
 	end
