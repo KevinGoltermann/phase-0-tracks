@@ -15,6 +15,7 @@ SQL
 
 db.execute(create_table_cmd)
 
+#Methods for program
 def add_flight(db, flight_number, day, departure, arrival)
 	db.execute("INSERT INTO flights (flight_number, day, departure, arrival) VALUES (?, ?, ?, ?)", [flight_number, day, departure, arrival])
 end
@@ -28,12 +29,16 @@ def flight_list(db)
 	puts "Here are your scheduled flights:"
 	list = db.execute("SELECT * FROM flights")
 	list.each do |flight_number|
-		puts "#{flight_number}" #d------------------
+		puts "*"*60
+		puts "#{flight_number}"
 	end
 end
 
 
-
+#Loop throught through program to do a few things
+#Be able to add a flight
+#Be able to delete a flight
+#Be able to see all your flights
 puts "Welcome to Flight Tracker! What would you like to do?"
 exit = FALSE
 until exit == TRUE
@@ -72,16 +77,3 @@ until exit == TRUE
 		puts 'Please enter the the number that corresponds to your choice.'
 	end
 end
-		
-
-
-
-
-
-
-
-
-
-
-
-
